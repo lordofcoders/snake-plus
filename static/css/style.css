@@ -1,0 +1,20 @@
+*
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+body
+{
+	background: #000;
+	margin: 0px;
+	padding: 0px;
+}
+
+canvas
+{
+	position: relative;
+	margin: 0px auto;
+	display: block;
+	background: #fff;
+}
