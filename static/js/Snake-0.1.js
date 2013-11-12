@@ -1,34 +1,6 @@
 //var socket = io.connect('http://localhost:8888');
 		//socket.on('connect', function(){});
-/*
-  The MIT License
 
-  Copyright (c) 2012 Olaf Horstmann, indiegamr.com
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
-*/
-
-
-/**
-* A Pixel Perfect Collision Detection for EaselJS Bitmap-Objects
-* @author olsn, indiegamr.com
-**/
 
 this.ndgmr = this.ndgmr || {};
 
@@ -520,18 +492,18 @@ this.ndgmr = this.ndgmr || {};
 				
 				that.spawnFood = function()
 				{
-					var x = Math.round(Math.random() * 1200);
+					var x = Math.floor(Math.random() * 1200);
 					var excess = x % 20;
 					x -= excess;
 					
-					var y = Math.round(Math.random() * 600);
+					var y = Math.floor(Math.random() * 600);
 					excess = y % 20;
 					y -= excess;
 					var check = true;
 					for(var i=0; i<that.snake.segments.length; i++)
 					{
 						if(that.snake.segments[i].x === x && that.snake.segments[i].y === y)
-						{
+						{ 
 							check = false;
 							break;
 						}
